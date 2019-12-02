@@ -16,8 +16,29 @@ KLab'项目链接：https://www.kesci.com/home/project/share/926c665b7bd3a61a
 
 修改torchreid.data.datamanager.py下的MyDataset类的
 
-`self.train_dir = osp.join(root, "MyDataset_V2/bounding_box_train_remove_1_and_2_v2")  # root+该str路径为训练集具体路径`
-`self.val_query_dir = osp.join(root, "MyDataset_V2/query_v2")  # root+该str路径为验证集query具体路径`
-`self.val_gallery_dir = osp.join(root, "MyDataset_V2/bounding_box_test_distractor_v2")  # root+该str路径为验证集gallery具体路径`
-`self.query_dir = osp.join(root, "chu_test_b/chu_test_b/query_b/query_b")  # root+该str路径为测试集A或B的query具体路径`
-`self.gallery_dir = osp.join(root, "chu_test_b/chu_test_b/gallery_b/gallery_b")  # root+该str路径为测试集A或B的gallery具体路径`
+`self.train_dir = osp.join(root, "MyDataset_V2/bounding_box_train_remove_1_and_2_v2") `
+`self.val_query_dir = osp.join(root, "MyDataset_V2/query_v2")  `
+`self.val_gallery_dir = osp.join(root, "MyDataset_V2/bounding_box_test_distractor_v2") `
+`self.query_dir = osp.join(root, "chu_test_b/chu_test_b/query_b/query_b") `
+`self.gallery_dir = osp.join(root, "chu_test_b/chu_test_b/gallery_b/gallery_b") `
+
+为对应训练集，验证集query，gallery和测试集query，gallery目录。
+
+## 2.训练
+修改`run.py`中的`save_dir`为文件(模型，日志等)保存地址，`torchreid.data.datamanager.MyDataManager`中的`root`参数为数据集所在大目录(该目录下为包含数据集的完整目录，例如 `root` + `self.train_dir`即为训练集完整目录)。然后运行run.py，即
+`python3 run.py`
+以执行一次完整的模型训练和测试(但这个测试结果是单模的，我们不作为最终结果)
+
+类似的，再重复4次，共训练得到5个模型。我们训练好的模型链接如下：
+https://drive.google.com/open?id=1dVwq64QDgKg7DYqObzqjYWqDJJVDUTAR
+
+## 2.测试
+切换到多模型测试目录：`cd ../jicheng`
+类似地修改torchreid.data.datamanager.py下的MyDataset类的下的相关路径，然后修改`jicheng5.py`下的`save_dir`为文件(json文件，日志等)保存地址，`torchreid.data.datamanager.MyDataManager`中的`root`参数为数据集所在大目录以及`fpath_1`~`fpath5`为训练好的5个模型所在目录，然后运行jicheng5.py即可进行测试：
+`python3 jicheng5.py`
+
+生成的json文件保存在`save_dir`下，我们生成的结果放在下面的链接中：https://drive.google.com/open?id=1dVwq64QDgKg7DYqObzqjYWqDJJVDUTAR
+
+所用到的预训练模型是在ImageNet上预训练的SeNet模型，链接为：http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
+
+感谢您的审阅。
