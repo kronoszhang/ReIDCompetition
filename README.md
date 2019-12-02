@@ -10,3 +10,4 @@ KLab'项目链接：https://www.kesci.com/home/project/share/926c665b7bd3a61a
 
 下载本项目：
 `git clone https://github.com/ChronousZhang/ReIDCompetition.git`
+`cd ReIDCompetition/single_model`
