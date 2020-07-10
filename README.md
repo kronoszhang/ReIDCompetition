@@ -29,7 +29,7 @@ KLab项目链接：https://www.kesci.com/home/project/share/926c665b7bd3a61a
 `python3 run.py`
 以执行一次完整的模型训练和测试(但这个测试结果是单模的，我们不作为最终结果)
 
-类似的，再重复4次，共训练得到5个模型。我们训练好的模型链接如下：
+我们训练好的5个模型链接如下：
 https://drive.google.com/open?id=1dVwq64QDgKg7DYqObzqjYWqDJJVDUTAR
 
 ## 2.测试
