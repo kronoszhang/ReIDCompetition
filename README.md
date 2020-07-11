@@ -44,3 +44,6 @@ https://drive.google.com/open?id=1dVwq64QDgKg7DYqObzqjYWqDJJVDUTAR
 http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
 
 感谢您的审阅。
+
+
+以上代码是参与初赛评审的最终代码，
