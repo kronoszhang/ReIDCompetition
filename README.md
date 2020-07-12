@@ -64,4 +64,5 @@ http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
 我们选择se-renext101作为骨干网络，其通道注意力提供了很好的鉴别力
 
 ## 3. 实验细节
-* 图片输入384 \times 128
+* 图片输入384 * 128
+* 总训练150 epoch，初始学习率3.5e-4，Adam优化器,在30和120 epoch个衰减学习率至上一步1/10。
