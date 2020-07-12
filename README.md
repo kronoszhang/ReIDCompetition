@@ -46,4 +46,8 @@ http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
 感谢您的审阅。
 
 
-以上代码是参与初赛评审的最终代码，
+以上代码是参与初赛评审的最终代码，下面介绍一下我们使用的模型：
+## 1. 模型
+我们使用的模型基于strong baseline，可参考https://github.com/michuanhaohao/reid-strong-baseline
+模型如下：
+
