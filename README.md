@@ -51,3 +51,17 @@ http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
 我们使用的模型基于strong baseline，可参考https://github.com/michuanhaohao/reid-strong-baseline
 模型如下：
 ![ ](https://github.com/ChronousZhang/ReIDCompetition/blob/master/pipeline.jpg)
+
+文章用到了6个tricks:
+* BNNeck  在不同层优化不同的损失函数，解决了softmax和triplet优化存在差异的问题
+* Lats Stride  增大特征图
+* Label Smooth 让网络必要太相信自己的判断， 我们在后期去掉了这个技术，因为后期网络够强了，可以信赖
+* Warm Up
+* Random Erasing
+* Center Loss
+
+## 2. backbone
+我们选择se-renext101作为骨干网络，其通道注意力提供了很好的鉴别力
+
+## 3. 实验细节
+* 图片输入384 \times 128
