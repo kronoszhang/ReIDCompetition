@@ -50,4 +50,4 @@ http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
 ## 1. 模型
 我们使用的模型基于strong baseline，可参考https://github.com/michuanhaohao/reid-strong-baseline
 模型如下：
-
+![ ](
