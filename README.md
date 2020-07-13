@@ -78,3 +78,7 @@ http://data.lip6.fr/cadene/pretrainedmodels/se_resnext101_32x4d-3b2fe3d8.pth
 * 我们去掉了低于(包括)两张图像的ID和超过1000张图像的ID，防止类别过于不平衡。
 * 剩下的中随机选择500个ID的图像作为本地验证集，测试模型效果，与线上结果基本一致
 * 用测试集数据聚类打伪标签增强模型泛化能力
+
+
+
+视频介绍：https://www.bilibili.com/video/BV1n7411K7br
